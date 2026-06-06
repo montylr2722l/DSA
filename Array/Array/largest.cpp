@@ -12,15 +12,6 @@ int largest(int arr[], int n){
     return largest;
 }
 
-//Smallest element in array
-int smallest (int arr[], int n){
-    int smallest = arr[0];
-    for (int i=1; i<n; i++){
-        if(arr[i]<smallest){
-            smallest = arr[i];
-        }
-    } return smallest;
-}
 // Second largest element in array
 int secondlargest(int arr[], int n){
     int largest = arr[0];
@@ -55,16 +46,6 @@ int secondsmallest(int arr[], int n){
     return ssmallest;
 }
 
-
-// check if arrary is sorted or not
-bool isSorted (int arr[] , int n){
-    for (int i=1; i<n; i++){
-        if(arr[i]>= arr[i-1]){
-
-        }else{ return false; }
-    } return true;
-}
-
 int main(){
     int arr[] = {12, 35, 1, 10, 34, 1};
     int n = sizeof(arr)/sizeof(arr[0]);
@@ -72,7 +53,6 @@ int main(){
     cout << "Largest: " << largest(arr, n) << endl;
     cout << "Second Largest: " << secondlargest(arr, n) << endl;
     cout << "Second Smallest: " << secondsmallest(arr, n) << endl;
-    cout << boolalpha<<endl;
-    cout << "isSorted: " << isSorted(arr , n)<<endl;
+
     return 0;
 }
